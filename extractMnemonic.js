@@ -1,5 +1,5 @@
 // PATH OF LevelDB
-const PATH = '[PATH OF LEVELDB]'
+const PATH = ''
 
 // hunjison added
 let crypto;
@@ -165,6 +165,7 @@ function encryptWithKey (key, dataObj) {
 
 // Takes encrypted text, returns the restored Pojo.
 function decrypt (password, text) {
+  console.log(text)
   const payload = JSON.parse(text)
   const salt = payload.salt
   return keyFromPassword(password, salt)
